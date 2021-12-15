@@ -9,8 +9,8 @@
     <div class="profile-dropdown">
         <div class="profile-dropdown__container">
             <ul class="profile-menu__dropdown">
-                <li class="profile-menu__item"><a class="profile-menu__link" href="https://client.marketseller.pro/">Мои продукты</a></li>
-                <li class="profile-menu__item"><a class="profile-menu__link" href="https://client.marketseller.pro/settings">Настройки</a></li>
+                <li class="profile-menu__item"><a class="profile-menu__link" href="">Мои продукты</a></li>
+                <li class="profile-menu__item"><a class="profile-menu__link" href="">Настройки</a></li>
                 <li class="profile-menu__item">Выход</li>
             </ul>
         </div>
@@ -18,7 +18,7 @@
     <div class="setting-page">
         <div class="setting-page__container">
             <div>
-                <h1 class="setting-page__title"><a class="single-course__back-link" href="https://client.marketseller.pro/"></a>Настройки аккаунта</h1>
+                <h1 class="setting-page__title"><a class="single-course__back-link" href=""></a>Настройки аккаунта</h1>
             </div>
             <div class="setting-page__title-wrapper">
                 <div class="setting-page__mob-title">Смена пароля</div>

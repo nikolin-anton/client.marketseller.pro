@@ -60,6 +60,4 @@
         </div>
     </div>
 </div>
-<script src="{{asset('js/2.9955d556.chunk.js')}}"></script>
-<script src="{{asset('js/main.cd09728f.chunk.js')}}" ></script>
-<script src="{{asset('js/index.js')}}"></script>
+
