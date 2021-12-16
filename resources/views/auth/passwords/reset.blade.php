@@ -64,16 +64,24 @@
 {{--</div>--}}
 <div class="profile-menu">
     <div class="profile-menu__container">
-        <div class="profile-menu__email">mqf10660@yuoia.com</div>
+        <div class="profile-menu__email">{{ Auth::user()->email }}</div>
         <div class="profile-menu__burger"><span></span><span></span><span></span><span></span></div>
     </div>
 </div>
 <div class="profile-dropdown">
     <div class="profile-dropdown__container">
         <ul class="profile-menu__dropdown">
-            <li class="profile-menu__item"><a class="profile-menu__link" href="">Мои продукты</a></li>
-            <li class="profile-menu__item"><a class="profile-menu__link" href="">Настройки</a></li>
-            <li class="profile-menu__item">Выход</li>
+            <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('home')}}">Мои продукты</a></li>
+            <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('password.reset', '@csrf')}}">Настройки</a></li>
+            <li class="profile-menu__item"><a class="dropdown-item" href="{{ route('logout') }}"
+                                              onclick="event.preventDefault();
+                                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Выход') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form></li>
         </ul>
     </div>
 </div>
@@ -93,6 +101,15 @@
                     @csrf
                     <input type="hidden" name="token" value="{{ $token }}">
                     <h3 class="auth-form__title">Заполните все поля</h3>
+                    <div class="form-input">
+                        <label class="form-input__label">Введите email</label>
+                        <input id="user" type="email" class="form-input__control form-control @error('email') is-invalid @enderror" name="user" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
+                             @error('user')
+                                 <span class="invalid-feedback" role="alert">
+                                     <strong>{{ $message }}</strong>
+                                 </span>
+                             @enderror
+                    </div>
                     <div class="form-input">
                         <label class="form-input__label">Введите действующий пароль</label><input class="form-input__control" type="password" placeholder="" name="current-password" value="" />
                         <img
@@ -120,30 +137,10 @@
                         />
                         <div class="form-input__error-text"></div>
                     </div>
-                    <button type="submit" class="button auth-form__button">{{ __('Reset Password') }}</button>
+                    <button type="submit" class="button auth-form__button">{{ __('Сменить пароль') }}</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
-<div class="modal__overlay hide"></div>
-<div class="modal hide">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <style>
-                .cls-1 {
-                    fill: none;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                    stroke-width: 3px;
-                }
-            </style>
-        </defs>
-        <g id="cross">
-            <line class="cls-1" x1="7" x2="25" y1="7" y2="25"></line>
-            <line class="cls-1" x1="7" x2="25" y1="25" y2="7"></line>
-        </g>
-    </svg>
-    <div class="modal__text"></div>
 </div>
 @endsection

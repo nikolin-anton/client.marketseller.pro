@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+{{--                <div class="card-header">{{ __('Dashboard') }}</div>--}}
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+{{--                    {{ __('You are logged in!') }}--}}
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
 <div class="profile-dropdown">
     <div class="profile-dropdown__container">
         <ul class="profile-menu__dropdown">
-            <li class="profile-menu__item"><a class="profile-menu__link" href="/">Мои продукты</a></li>
+            <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('home')}}">Мои продукты</a></li>
             <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('password.reset', '@csrf')}}">Настройки</a></li>
             <li class="profile-menu__item"><a class="dropdown-item" href="{{ route('logout') }}"
                                                        onclick="event.preventDefault();
