@@ -17,17 +17,21 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', function (){
-   return view('index');
-});
-Route::get('/setting', function (){
-    return view('setting');
-});
+//Route::get('/', function (){
+//   return view('index');
+//});
+//Route::get('/setting', function (){
+//    return view('setting');
+//});
+//
+//Route::get('/auth', function (){
+//    return view('/auth/auth');
+//});
+//Route::get('/recovery', function (){
+//    return view('/auth/recovery');
+//});
 
-Route::get('/auth', function (){
-    return view('/auth/auth');
-});
-Route::get('/recovery', function (){
-    return view('/auth/recovery');
-});
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
