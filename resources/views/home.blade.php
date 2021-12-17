@@ -30,7 +30,7 @@
     <div class="profile-dropdown__container">
         <ul class="profile-menu__dropdown">
             <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('home')}}">Мои продукты</a></li>
-            <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('password.reset', '@csrf')}}">Настройки</a></li>
+            <li class="profile-menu__item"><a class="profile-menu__link" href="{{route('reset_password')}}">Настройки</a></li>
             <li class="profile-menu__item"><a class="dropdown-item" href="{{ route('logout') }}"
                                                        onclick="event.preventDefault();
                                                                      document.getElementById('logout-form').submit();">

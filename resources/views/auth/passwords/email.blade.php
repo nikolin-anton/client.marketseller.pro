@@ -59,17 +59,20 @@
                             {{ session('status') }}
                         </div>
                     @endif
+{{--                        <form method="POST" action="{{ route('reset_password_by_email') }}">--}}
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
                         <h3 class="auth-form__title">Восстановление пароля</h3>
                         <div class="form-input">
                             <label class="form-input__label">Введите почту, указанную при регистрации</label>
                             <input id="email" type="email" class="form-input__control form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                @error('email')
-                                <span class="form-input__error-text invalid-feedback" role="alert">
+                                <div>
+                                    @error('email')
+                                    <span class="form-input__error-text invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                         </div>
                         <div class="auth-form__recovery">
                             <a class="auth-form__recovery-link" href="{{route('login')}}">Войти в личный кабинет</a>
