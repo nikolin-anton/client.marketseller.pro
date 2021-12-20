@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="{{asset('css/main.dd79597f.chunk.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 
+
+    <link rel="stylesheet" type="text/css" href="{{asset('css/reset.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet(1).css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style_form.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/media.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/card.css')}}" />
+
+
+    <!-- <script src="https://widget.cloudpayments.ru/bundles/checkout"></script> -->
+
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">

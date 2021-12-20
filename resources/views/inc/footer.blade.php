@@ -60,4 +60,40 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/checkout.js')}}"></script>
+
+<script src="{{asset('js/bundle.js')}}"></script>
+<script src="{{asset('js/card.js')}}"></script>
+<script src="{{asset('js/jquery.inputmask.min.js')}}"></script>
+<script src="{{asset('js/jquery.validate.min.js')}}"></script>
+<script src="{{asset('js/card.min.js')}}"></script>
+<script type="text/javascript">
+    var errorsMsg = {
+        it: {
+            firstnameInput: "Per favore inserisci il tuo nome",
+            lastnameInput: "Per favore inserisci il tuo cognome",
+            phoneInput: "Inserisci il tuo telefono",
+            emailInput: "Inserisci il tuo indirizzo email",
+            emailInputIndex: "Formato indirizzo email non valido",
+            alreadyEmail: "Account già registrato",
+            EnerName: "Inserisci il tuo nome",
+            mistakeCardNumber: "Errori nel numero della carta",
+            EnterCardNumber: "Inserisci il numero della carta",
+            incorrectYear: "Anno sbagliato",
+            specifyYear: "Specificare l'anno",
+            enterCvCCode: "Inserisci il codice CVC",
+        },
+    };
+
+    var locale = "it";
+</script>
+<script type="text/javascript" src="{{asset('js/script.js')}}"></script>
+<iframe
+    name="_hjRemoteVarsFrame"
+    title="_hjRemoteVarsFrame"
+    id="_hjRemoteVarsFrame"
+    src="{{asset('box-a1ae2079824d1c48aa9ce06efb256f18.html')}}"
+    style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
+></iframe>
 

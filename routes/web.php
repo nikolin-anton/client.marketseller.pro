@@ -34,10 +34,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::get('/reset_password', 'App\Http\Controllers\Auth\ResetUserPasswordController@index')->name('reset_password');
 Route::post('/reset_password', 'App\Http\Controllers\Auth\ResetUserPasswordController@reset_password')->name('reset_password.update');
 //Route::post('password/reset', 'App\Http\Controllers\Auth\ResetUserPasswordController@reset_password_by_email')->name('reset_password_by_email');
+
 

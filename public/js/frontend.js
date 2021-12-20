@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
     });
 
     $('.form-input__eye').on('click', function (e){
-        
+
         if($(this).prev().attr('type') == 'password') {
             $(this).prev().attr('type', 'text');
             $(this).attr("src", "../img/eye_on.png");
@@ -21,5 +21,12 @@ jQuery(document).ready(function($) {
         }
 
     });
+
+    $('.courses-card__button').on('click', function(e){
+        console.log('dfffsdf');
+        //e.preventDefault();
+        $('.card_popup').show();
+
+    })
 });
 
