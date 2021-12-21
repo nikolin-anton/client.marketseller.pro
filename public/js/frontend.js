@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
     $('.courses-card__button').on('click', function(e){
         console.log('dfffsdf');
         //e.preventDefault();
-        $('.card_popup').show();
+        $('.first_screen__form').show();
 
     })
 });
